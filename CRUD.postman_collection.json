@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "06296169-ecdc-43aa-a57f-91a8010c4b1d",
+		"name": "CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjRjYTg4ZDQyZDdkMjE1Njg0YjEwOGUiLCJpbnQiOjE2NDkxOTEwNTMsImV4cCI6MTY0OTc5NTg1M30.CrCBSxEBN0OUs6k3hlnbyTRx9aq2PhhyWURl3PKKxB0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:4000/api/user",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"user"
+					]
+				},
+				"description": "Obtenemos todos los usuarios registrados en el sistema"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/user/{id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjRjYTg4ZDQyZDdkMjE1Njg0YjEwOGUiLCJpbnQiOjE2NDkxOTEwNTMsImV4cCI6MTY0OTc5NTg1M30.CrCBSxEBN0OUs6k3hlnbyTRx9aq2PhhyWURl3PKKxB0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:4000/api/user/62423ddf85fc52d494dc6c0e",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"user",
+						"62423ddf85fc52d494dc6c0e"
+					]
+				},
+				"description": "Obtenemos el usuario indicado en {id}"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"evaristo\",\n    \"email\":\"evarito@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:4000/api/user",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/user/{id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjRjYTg4ZDQyZDdkMjE1Njg0YjEwOGUiLCJpbnQiOjE2NDkxOTEwNTMsImV4cCI6MTY0OTc5NTg1M30.CrCBSxEBN0OUs6k3hlnbyTRx9aq2PhhyWURl3PKKxB0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"pascual\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:4000/api/user/62423ddf85fc52d494dc6c0e",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"user",
+						"62423ddf85fc52d494dc6c0e"
+					]
+				},
+				"description": "Modificamos el usuario {id}."
+			},
+			"response": []
+		},
+		{
+			"name": "/api/user/{id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjRjYTg4ZDQyZDdkMjE1Njg0YjEwOGUiLCJpbnQiOjE2NDkxOTEwNTMsImV4cCI6MTY0OTc5NTg1M30.CrCBSxEBN0OUs6k3hlnbyTRx9aq2PhhyWURl3PKKxB0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:4000/api/user/62423ddf85fc52d494dc6c0e",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"user",
+						"62423ddf85fc52d494dc6c0e"
+					]
+				},
+				"description": "Eliminamos el usuario {id}"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/auth",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjRjYTg4ZDQyZDdkMjE1Njg0YjEwOGUiLCJpbnQiOjE2NDkxOTEwNTMsImV4cCI6MTY0OTc5NTg1M30.CrCBSxEBN0OUs6k3hlnbyTRx9aq2PhhyWURl3PKKxB0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:4000/api/auth",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth"
+					]
+				},
+				"description": "Obtenemos todos los usuarios registrados en el sistema. Mostramos versión reducida de GET /api/user"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/auth/me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjRjYTg4ZDQyZDdkMjE1Njg0YjEwOGUiLCJpbnQiOjE2NDkxOTEwNTMsImV4cCI6MTY0OTc5NTg1M30.CrCBSxEBN0OUs6k3hlnbyTRx9aq2PhhyWURl3PKKxB0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:4000/api/auth/me",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"me"
+					]
+				},
+				"description": "Obtenemos el usuario a partir de un token válido"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"juan@gmail.com\",\n    \"password\":\"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:4000/api/auth",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth"
+					]
+				},
+				"description": "Realiza una identificación o login (signIn) y devuelve un token válido."
+			},
+			"response": []
+		},
+		{
+			"name": "/api/reg",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"maria\",\n    \"email\":\"maria@gmail.com\",\n    \"password\":\"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:4000/api/reg",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"reg"
+					]
+				},
+				"description": "Realiza un registro mínimo (signUp) de un usuario y devuelve un token válido."
+			},
+			"response": []
+		}
+	]
+}
